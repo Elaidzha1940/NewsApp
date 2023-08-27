@@ -11,3 +11,19 @@
 
 import Foundation
 
+// MARK: - Welcome
+struct News: Codable {
+    let articles: [Article]
+}
+
+// MARK: - Article
+struct Article: Codable, Identifiable {
+    
+    let id = UUID()
+    let author: String?
+    let url: String
+    let source, title, description: String
+    let image: String
+    let date: Date
+}
+
