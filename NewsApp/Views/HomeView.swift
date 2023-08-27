@@ -1,7 +1,7 @@
 //  /*
 //
 //  Project: NewsApp
-//  File: NewsListView.swift
+//  File: HometView.swift
 //  Created by: Elaidzha Shchukin
 //  Date: 27.08.2023
 //
@@ -12,7 +12,7 @@
 import SwiftUI
 import Kingfisher
 
-struct NewsListView: View {
+struct HometView: View {
     @ObservedObject var viewModel = NewsViewModel()
     
     var body: some View {
