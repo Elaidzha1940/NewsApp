@@ -17,3 +17,24 @@ protocol APIBuilder {
     var baseUrl: URL { get }
     var path: String { get }
 }
+
+enum NewsAPI {
+    
+    case getNews
+}
+
+extension NewsAPI: APIBuilder {
+    var urlRequest: URLRequest {
+        <#code#>
+    }
+    
+    var baseUrl: URL {
+        <#code#>
+    }
+    
+    var path: String {
+        <#code#>
+    }
+    
+    
+}
