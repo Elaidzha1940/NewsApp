@@ -65,6 +65,7 @@
 		E4E04D2C2A9B5FE00079EE6C /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				E4E04D582A9BB6810079EE6C /* States */,
 				E4E04D552A9BB0900079EE6C /* Service */,
 				E4E04D522A9BADFA0079EE6C /* Networking */,
 				E4E04D4F2A9B983D0079EE6C /* EndPoint */,
@@ -131,6 +132,13 @@
 				E4E04D562A9BB0A40079EE6C /* NewsService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		E4E04D582A9BB6810079EE6C /* States */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = States;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
