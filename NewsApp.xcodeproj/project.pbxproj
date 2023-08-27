@@ -16,6 +16,7 @@
 		E4E04D4B2A9B61EB0079EE6C /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = E4E04D4A2A9B61EB0079EE6C /* ObjectMapper */; };
 		E4E04D4E2A9B61FE0079EE6C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E4E04D4D2A9B61FE0079EE6C /* Kingfisher */; };
 		E4E04D512A9B984B0079EE6C /* NewsEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E04D502A9B984B0079EE6C /* NewsEndPoint.swift */; };
+		E4E04D542A9BAE1A0079EE6C /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E04D532A9BAE1A0079EE6C /* APIError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E4E04D3E2A9B61220079EE6C /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		E4E04D402A9B61440079EE6C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E4E04D502A9B984B0079EE6C /* NewsEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsEndPoint.swift; sourceTree = "<group>"; };
+		E4E04D532A9BAE1A0079EE6C /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		E4E04D2C2A9B5FE00079EE6C /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				E4E04D522A9BADFA0079EE6C /* Networking */,
 				E4E04D4F2A9B983D0079EE6C /* EndPoint */,
 				E4E04D3D2A9B60CD0079EE6C /* Model */,
 				E4E04D3C2A9B60C50079EE6C /* Views */,
@@ -109,6 +112,14 @@
 				E4E04D502A9B984B0079EE6C /* NewsEndPoint.swift */,
 			);
 			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		E4E04D522A9BADFA0079EE6C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E4E04D532A9BAE1A0079EE6C /* APIError.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +205,7 @@
 				E4E04D3F2A9B61220079EE6C /* News.swift in Sources */,
 				E4E04D412A9B61440079EE6C /* HomeView.swift in Sources */,
 				E4E04D2E2A9B5FE00079EE6C /* NewsAppApp.swift in Sources */,
+				E4E04D542A9BAE1A0079EE6C /* APIError.swift in Sources */,
 				E4E04D512A9B984B0079EE6C /* NewsEndPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
