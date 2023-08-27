@@ -10,15 +10,29 @@
 //  */
 
 import SwiftUI
+import Kingfisher
 
 struct NewsListView: View {
+    @ObservedObject var viewModel = NewsViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List(viewModel.newsItems) { newsItem in
+                NavigationLink(destination: NewsDetailView(newsItem: newsItem)) {
+                    HStack {
+                        KFImage(URL(string: newsItem.urlToImage ?? ""))
+                            .resizable()
+                            .frame(width: 100, height: 100)
+                        
+                        Text(newsItem.title ?? "No Title")
+                    }
+                }
+            }
+            .onAppear {
+                viewModel.fetchNews()
+            }
+            .navigationBarTitle("News")
+        }
     }
 }
 
-struct NewsListView_Previews: PreviewProvider {
-    static var previews: some View {
-        NewsListView()
-    }
-}
