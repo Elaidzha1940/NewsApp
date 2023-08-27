@@ -24,16 +24,20 @@ enum NewsAPI {
 }
 
 extension NewsAPI: APIBuilder {
+    
     var urlRequest: URLRequest {
-        <#code#>
+        return URLRequest(url: self.baseUrl.appendingPathComponent(self.path))
     }
     
     var baseUrl: URL {
-        <#code#>
+        switch self {
+        case .getNews:
+            return URL(string: "https://api.lil.software")!
+        }
     }
     
     var path: String {
-        <#code#>
+        return "\news"
     }
     
     
