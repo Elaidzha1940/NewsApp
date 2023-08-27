@@ -51,6 +51,9 @@
 		E4E04D2C2A9B5FE00079EE6C /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				E4E04D3D2A9B60CD0079EE6C /* Model */,
+				E4E04D3C2A9B60C50079EE6C /* View */,
+				E4E04D3B2A9B60AF0079EE6C /* VeiwModel */,
 				E4E04D2D2A9B5FE00079EE6C /* NewsAppApp.swift */,
 				E4E04D2F2A9B5FE00079EE6C /* ContentView.swift */,
 				E4E04D312A9B5FE00079EE6C /* Assets.xcassets */,
@@ -65,6 +68,27 @@
 				E4E04D342A9B5FE00079EE6C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E4E04D3B2A9B60AF0079EE6C /* VeiwModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VeiwModel;
+			sourceTree = "<group>";
+		};
+		E4E04D3C2A9B60C50079EE6C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E4E04D3D2A9B60CD0079EE6C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
