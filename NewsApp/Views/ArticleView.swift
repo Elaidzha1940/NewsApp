@@ -5,12 +5,12 @@
 //  Created by: Elaidzha Shchukin
 //  Date: 28.08.2023
 //
-//  Status: in progress | Decorated
+//  S
 //
 //  */
 
 import SwiftUI
-import 
+import URLImage
 
 struct ArticleView: View {
     let artile: Article
@@ -19,15 +19,19 @@ struct ArticleView: View {
         
         HStack {
             
-            if let imgUrl = artile.image,
-               let url = URL(string: imgUrl) {
+            if let url = artile.image,
+               let url = URL(string: url) {
                 
-                KFImage(url,
-                        content: { image in
+                URLImage(url: url,
+                         options: URLImageOptions(
+                            identifier: artile.id .uuidString,
+                            cachePolicy:
+                                    .returnStoreElseLoad(cacheDelay: nil, downloadDelay: 0.25)
+                         ),
+                         content: { image in
                     image
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: 80, height: 80)
                 })
                 
             } else {

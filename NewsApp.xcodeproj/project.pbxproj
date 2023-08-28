@@ -21,6 +21,8 @@
 		E4E04D5A2A9BB69F0079EE6C /* ResultState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E04D592A9BB69F0079EE6C /* ResultState.swift */; };
 		E4E04D5C2A9BB8330079EE6C /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E04D5B2A9BB8330079EE6C /* NewsViewModel.swift */; };
 		E4E04D622A9CA68D0079EE6C /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E04D612A9CA68D0079EE6C /* ArticleView.swift */; };
+		E4E04D652A9CBCC70079EE6C /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = E4E04D642A9CBCC70079EE6C /* URLImage */; };
+		E4E04D672A9CBCC70079EE6C /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = E4E04D662A9CBCC70079EE6C /* URLImageStore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,8 +45,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4E04D672A9CBCC70079EE6C /* URLImageStore in Frameworks */,
 				E4E04D4E2A9B61FE0079EE6C /* Kingfisher in Frameworks */,
 				E4E04D4B2A9B61EB0079EE6C /* ObjectMapper in Frameworks */,
+				E4E04D652A9CBCC70079EE6C /* URLImage in Frameworks */,
 				E4E04D482A9B61DB0079EE6C /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -170,6 +174,8 @@
 				E4E04D472A9B61DB0079EE6C /* Alamofire */,
 				E4E04D4A2A9B61EB0079EE6C /* ObjectMapper */,
 				E4E04D4D2A9B61FE0079EE6C /* Kingfisher */,
+				E4E04D642A9CBCC70079EE6C /* URLImage */,
+				E4E04D662A9CBCC70079EE6C /* URLImageStore */,
 			);
 			productName = NewsApp;
 			productReference = E4E04D2A2A9B5FE00079EE6C /* NewsApp.app */;
@@ -203,6 +209,7 @@
 				E4E04D462A9B61DB0079EE6C /* XCRemoteSwiftPackageReference "Alamofire" */,
 				E4E04D492A9B61EB0079EE6C /* XCRemoteSwiftPackageReference "ObjectMapper" */,
 				E4E04D4C2A9B61FE0079EE6C /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				E4E04D632A9CBCC70079EE6C /* XCRemoteSwiftPackageReference "url-image" */,
 			);
 			productRefGroup = E4E04D2B2A9B5FE00079EE6C /* Products */;
 			projectDirPath = "";
@@ -465,6 +472,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		E4E04D632A9CBCC70079EE6C /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -482,6 +497,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E4E04D4C2A9B61FE0079EE6C /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		E4E04D642A9CBCC70079EE6C /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4E04D632A9CBCC70079EE6C /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+		E4E04D662A9CBCC70079EE6C /* URLImageStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4E04D632A9CBCC70079EE6C /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImageStore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
