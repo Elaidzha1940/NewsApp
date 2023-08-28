@@ -12,9 +12,7 @@
 import SwiftUI
 
 struct ErrorView: View {
-   
-    
-    
+
     typealias ErrorViewActionHandler = () -> Void
     
     let error = Error.self
@@ -38,7 +36,7 @@ struct ErrorView: View {
                 .font(.system(size: 30, weight: .bold, design: .rounded))
                 .multilineTextAlignment(.center)
             
-            Text("Error: \(error.localizedDescription)")
+            Text(error.localizedDescription)
                 .foregroundColor(.red)
                 .font(.system(size: 20, weight: .bold, design: .rounded))
                 .multilineTextAlignment(.center)
