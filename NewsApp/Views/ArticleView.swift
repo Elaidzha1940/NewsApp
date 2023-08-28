@@ -5,7 +5,7 @@
 //  Created by: Elaidzha Shchukin
 //  Date: 28.08.2023
 //
-//  Status: in progress | Decorated
+//  Status: in progress | Not decorated
 //
 //  */
 
@@ -69,5 +69,6 @@ struct PlaceholderImageView: View {
 struct ArticleView_Previews: PreviewProvider {
     static var previews: some View {
         ArticleView(article: Article.iData)
+            .previewLayout(.sizeThatFits)
     }
 }
