@@ -10,7 +10,7 @@
 //  */
 
 import SwiftUI
-import URLImage
+import URLImageStore
 
 struct ArticleView: View {
     let article: Article
@@ -22,7 +22,7 @@ struct ArticleView: View {
             if let imgUrl = article.image,
                let url = URL(string: imgUrl) {
                 
-                URLImage(url: url,
+                URLImageStore(url: url,
                          options: URLImageOptions(
                             identifier: article.id.uuidString,
                             cachePolicy: .returnStoreElseLoad(cachDelay: nil, downloadDelay: 0.25)
