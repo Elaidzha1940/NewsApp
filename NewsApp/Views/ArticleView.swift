@@ -5,12 +5,12 @@
 //  Created by: Elaidzha Shchukin
 //  Date: 28.08.2023
 //
-//  S
+//  Status: in progress | Decorated
 //
 //  */
 
 import SwiftUI
-import Kingfisher
+import 
 
 struct ArticleView: View {
     let artile: Article
@@ -19,6 +19,20 @@ struct ArticleView: View {
         
         HStack {
             
+            if let imgUrl = artile.image,
+               let url = URL(string: imgUrl) {
+                
+                KFImage(url,
+                        content: { image in
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 80, height: 80)
+                })
+                
+            } else {
+                
+            }
         }
     }
 }
