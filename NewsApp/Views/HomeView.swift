@@ -5,7 +5,7 @@
 //  Created by: Elaidzha Shchukin
 //  Date: 27.08.2023
 //
-//  Status: in progress | Decorated
+//  Status: in progress | Not decorated
 //
 //  */
 
@@ -30,6 +30,9 @@ struct HomeView: View {
                 NavigationView {
                     List(articles) { item in
                         ArticleView(article: item)
+                            .onTapGesture {
+                                load(url: item.url)
+                            }
                     }
                     .navigationTitle("News")
                 }
