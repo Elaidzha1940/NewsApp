@@ -11,13 +11,20 @@
 
 import SwiftUI
 
-
 struct HomeView: View {
+   @StateObject var viewModel = NewsViewModelImpl(service: NewsServiceImpl())
+    
     var body: some View {
         
-        VStack {
+        Group {
             
         }
+        .onAppear(perform: viewModel.getArticles)
     }
 }
 
+struct HomeView_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeView()
+    }
+}
