@@ -13,29 +13,41 @@ import SwiftUI
 import URLImage
 
 struct ArticleView: View {
-    let artile: Article
+    let article: Article
     
     var body: some View {
         
         HStack {
             
-            if let url = artile.image,
-               let url = URL(string: url) {
+            if let imgUrl = article.image,
+               let url = URL(string: imgUrl) {
                 
                 URLImage(url: url,
                          options: URLImageOptions(
-                            identifier: artile.id .uuidString,
-                            cachePolicy:
-                                    .returnStoreElseLoad(cacheDelay: nil, downloadDelay: 0.25)
+                            identifier: article,
+                            cachePolicy: .returnStoreElseLoad(downloadDelay: 0.25)
                          ),
+                         failure: { error, _ in
+                    
+                    Image(systemName: "photo,fill")
+                        .foregroundColor(.red)
+                        .background(Color.red)
+                        .frame(width: 100, height: 100)
+                },
                          content: { image in
                     image
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                 })
-                
+                .frame(width: 100, height: 100)
+                .cornerRadius(20)
+
             } else {
                 
+                Image(systemName: "photo,fill")
+                    .foregroundColor(.red)
+                    .background(Color.red)
+                    .frame(width: 100, height: 100)
             }
         }
     }
@@ -43,6 +55,6 @@ struct ArticleView: View {
 
 struct ArticleView_Previews: PreviewProvider {
     static var previews: some View {
-        ArticleView(artile: Article.iData)
+        ArticleView(article: Article.iData)
     }
 }
